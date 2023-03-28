@@ -36,7 +36,7 @@ Route::get('/setup', function () {
 
         
         if (Auth::attempt($credintials)) {
-            $user = Auth::user();
+            // $user = Auth::user();
 
             $adminToken = $user->createToken('admin-token', ['create' , 'update' , 'delete']);
             $updateToken = $user->createToken('update-token', ['create' , 'update']);
